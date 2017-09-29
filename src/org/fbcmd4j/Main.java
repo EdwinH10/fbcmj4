@@ -138,7 +138,17 @@ public class Main {
 						System.out.println("\nEstado correctamente publicado");
 						break;
 					case 5:
-						
+						System.out.println("Ingresa el link: ");
+						String link = scan.nextLine();
+						try {
+							mfb.postLink(new URL(link));
+						} catch (MalformedURLException e) {
+							logger.error(e);
+						} catch (FacebookException e) {
+							logger.error(e);
+						}
+						System.out.println("\nLink correctamente publicado");
+						break;
 					case 6:
 						System.out.println("Gracias por usar el cliente!");
 						System.exit(0);
