@@ -1,19 +1,23 @@
 # fbcmj4
 
-Facebook CLI client. For educational purposes only.
+Cliente de Facebook en líne de comando para Evidencia de Computación en Java
 
 ## Instalación
 
-TODO: Agregar proceso de instalación.
+1. Clonar el repositorio o descargar el zip
+2. Importar el proyecto a Eclipse
+3. Exportar Jar ejecutable
+4. Abrirlo mediante la sentencia java -jar nombredelarchivo.jar
 
 ## Uso
 
-TODO: Agregar instrucciones de uso
+Instrucciones definidas en pantalla de CMD
 
 ## Créditos
 
-TODO: Agregar autor(es)
+Hugo Edwin Hidalgo Lugo
+Matricula 2816936
 
 ## Licencia
 
-TODO: Agregar Licencia
+Licencia GNU GPL3.0. Consultar archivo License en raíz del proyecto para mas info
