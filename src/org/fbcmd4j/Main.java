@@ -128,7 +128,15 @@ public class Main {
 						askToSaveFile("Wall", wall, scan);
 						break;
 					case 4:
-						
+						System.out.println("Escribe tu estado: ");
+						String estado = scan.nextLine();
+						try {
+							mfb.postStatusMessage(estado);
+						} catch (FacebookException e) {
+							logger.error(e);
+						}
+						System.out.println("\nEstado correctamente publicado");
+						break;
 					case 5:
 						
 					case 6:
