@@ -47,7 +47,7 @@ public class Main {
 			Scanner scan = new Scanner(System.in);
 			while(true) {
 			
-				System.out.println("Cliente de Facebook en línea de comando \n\n"
+				System.out.println("Cliente de Facebook en lÃ­nea de comando \n\n"
 								+  "Opciones: \n"
 								+  "(0) Configurar usuario \n"
 								+  "(1) Mostrar Usuario \n"
@@ -56,7 +56,7 @@ public class Main {
 								+  "(4) Publicar Estado \n"
 								+  "(5) Publicar Link \n"
 								+  "(6) Salir \n"
-								+  "\nPor favor ingrese una opción:");
+								+  "\nPor favor ingrese una opciÃ³n:");
 		
 					option = scan.nextInt();
 					scan.nextLine();
@@ -70,7 +70,7 @@ public class Main {
 						System.out.println("Ingresa al link y loggeate con tus credenciales de Facebook: \n"+urlVal);
 						System.out.println(" ");
 						System.out.println("Despues:");
-						System.out.println("Copia y pega el link de la p�gina a la que te redirigi� despu�s de ingresar a Facebook");
+						System.out.println("Copia y pega el link de la página a la que te redirigió después de ingresar a Facebook");
 						System.out.println("No importa que la pagina diga que no esta disponible");
 						String link0 = scan.nextLine();
 						String code = link0.substring(58);
@@ -120,35 +120,11 @@ public class Main {
 						askToSaveFile("NewsFeed", newsFeed, scan);
 						break;
 					case 3:
-						System.out.println("Mostrando Wall...");
-						ResponseList<Post> wall = mfb.getPosts();
-						for (Post p : wall) {
-							Utils.printPost(p);
-						}		
-						askToSaveFile("Wall", wall, scan);
-						break;
+						
 					case 4:
-						System.out.println("Escribe tu estado: ");
-						String estado = scan.nextLine();
-						try {
-							mfb.postStatusMessage(estado);
-						} catch (FacebookException e) {
-							logger.error(e);
-						}
-						System.out.println("\nEstado correctamente publicado");
-						break;
+						
 					case 5:
-						System.out.println("Ingresa el link: ");
-						String link = scan.nextLine();
-						try {
-							mfb.postLink(new URL(link));
-						} catch (MalformedURLException e) {
-							logger.error(e);
-						} catch (FacebookException e) {
-							logger.error(e);
-						}
-						System.out.println("\nLink correctamente publicado");
-						break;
+						
 					case 6:
 						System.out.println("Gracias por usar el cliente!");
 						System.exit(0);
@@ -170,11 +146,11 @@ public class Main {
 
 			while(n <= 0) {
 				try {
-					System.out.println("Cuántos posts deseas guardar?");
+					System.out.println("CuÃ¡ntos posts deseas guardar?");
 					n = Integer.parseInt(scan.nextLine());					
 			
 					if(n <= 0) {
-						System.out.println("Favor de ingresar un número válido");
+						System.out.println("Favor de ingresar un nÃºmero vÃ¡lido");
 					} else {
 						for(int i = 0; i<n; i++) {
 							if(i>posts.size()-1) break;
