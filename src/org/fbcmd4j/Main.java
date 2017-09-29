@@ -120,7 +120,13 @@ public class Main {
 						askToSaveFile("NewsFeed", newsFeed, scan);
 						break;
 					case 3:
-						
+						System.out.println("Mostrando Wall...");
+						ResponseList<Post> wall = mfb.getPosts();
+						for (Post p : wall) {
+							Utils.printPost(p);
+						}		
+						askToSaveFile("Wall", wall, scan);
+						break;
 					case 4:
 						
 					case 5:
